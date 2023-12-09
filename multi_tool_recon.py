@@ -16,8 +16,8 @@ def get_user_input():
 
 def run_dnsrecon(domain):
     try:
-        print("-------------------Runnig DNSRecon-------------------")
         result = subprocess.run(["dnsrecon","-d", domain],stdout=subprocess.PIPE,stderr=subprocess.PIPE, check=True)
+        print("-------------------Runnig DNSRecon-------------------")
         print(result.stdout.decode())
         print("----------------------Ending Result DNSRecon----------------------")
     except:
@@ -25,8 +25,8 @@ def run_dnsrecon(domain):
 
 def run_sublist3r(domain):
     try:
-        print("-------------------Running Sublist3r-------------------")
         result =subprocess.run(["sublist3r","-d",domain],stdout=subprocess.PIPE,stderr=subprocess.PIPE,check=True)
+        print("-------------------Running Sublist3r-------------------")
         print(result.stdout.decode())
         print("----------------------Ending Result Sublist3r----------------------")
     except:
@@ -34,8 +34,8 @@ def run_sublist3r(domain):
 
 def run_whois(domain):
     try:
-        print("-------------------Runinnig Whois------------------")
         result =subprocess.run(["whois",domain],stdout=subprocess.PIPE,stderr=subprocess.PIPE,check=True)
+        print("-------------------Runinnig Whois------------------")
         print(result.stdout.decode())
         print("----------------------Ending Result Whois----------------------")
     except:
