@@ -11,7 +11,6 @@ start_time = time.time()
 def get_user_input():
     parse_object=optparse.OptionParser()
     parse_object.add_option("-d", "--domain",dest="domain",help="target domain")
-    parse_object.add_option("-O","--output",dest="output",help="write output to txt file",default=None)
     return parse_object.parse_args()
 
 
